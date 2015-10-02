@@ -1,4 +1,8 @@
 # 44a
+
+This is a template for an openFrameworks project which compiles, and runs in JetBrains' awesome CLion. I've used one of the 3D examples to test this.
+
+## Quick start
 Import this as an existing project in CLion, and don't choose the option to re-create the CMakeLists.txt.
 
 ## Updating the CMake files for your environment
