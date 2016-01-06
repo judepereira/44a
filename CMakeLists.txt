@@ -5,7 +5,7 @@ set(APP_NAME 44a)
 set(BUNDLE_NAME "44a")
 
 # ===================== oF Directory =====================
-set(OF_DIRECTORY "/Users/jude/developer/of_v0.8.4_osx_release")
+set(OF_DIRECTORY "/Users/jude/developer/of_v0.9.0_osx_release")
 # ========================================================
 
 # ===================== Compiler Flags =====================
@@ -13,7 +13,7 @@ set(CMAKE_C_COMPILER "/usr/bin/clang")
 set(CMAKE_C_FLAGS "")
 
 set(CMAKE_CXX_COMPILER "/usr/bin/clang++")
-set(CMAKE_CXX_FLAGS "-stdlib=libstdc++ -D__MACOSX_CORE__")
+set(CMAKE_CXX_FLAGS "-stdlib=libc++ -D__MACOSX_CORE__")
 
 set(CMAKE_OSX_ARCHITECTURES i386)
 add_compile_options(-Wno-deprecated-declarations)

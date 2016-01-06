@@ -92,27 +92,29 @@ set(HEADER_TESS2 ${OF_DIRECTORY}/libs/tess2/include)
 set(HEADER_CAIRO ${OF_DIRECTORY}/libs/cairo/include/cairo)
 set(HEADER_RTAUDIO ${OF_DIRECTORY}/libs/rtAudio/include)
 set(HEADER_GLFW ${OF_DIRECTORY}/libs/glfw/include)
+set(HEADER_BOOST ${OF_DIRECTORY}/libs/boost/include)
 set(HEADER_SSL ${OF_DIRECTORY}/libs/openssl/include)
+set(HEADER_UTF8 ${OF_DIRECTORY}/libs/utf8cpp/include)
 
-set(OF_CORE_HEADERS ${HEADER_OF_0} ${HEADER_OF_1} ${HEADER_OF_2} ${HEADER_OF_3} ${HEADER_OF_4} ${HEADER_OF_5} ${HEADER_OF_6} ${HEADER_OF_7} ${HEADER_OF_8} ${HEADER_OF_9} ${HEADER_OF_10} ${HEADER_OF_11} ${HEADER_POCO} ${HEADER_FREETYPE} ${HEADER_FREETYPE2} ${HEADER_FMODEX} ${HEADER_GLEW} ${HEADER_FREEIMAGE} ${HEADER_TESS2} ${HEADER_CAIRO} ${HEADER_RTAUDIO} ${HEADER_GLFW} ${HEADER_SSL})
+set(OF_CORE_HEADERS ${HEADER_OF_0} ${HEADER_OF_1} ${HEADER_OF_2} ${HEADER_OF_3} ${HEADER_OF_4} ${HEADER_OF_5} ${HEADER_OF_6} ${HEADER_OF_7} ${HEADER_OF_8} ${HEADER_OF_9} ${HEADER_OF_10} ${HEADER_OF_11} ${HEADER_POCO} ${HEADER_FREETYPE} ${HEADER_FREETYPE2} ${HEADER_FMODEX} ${HEADER_GLEW} ${HEADER_FREEIMAGE} ${HEADER_TESS2} ${HEADER_CAIRO} ${HEADER_RTAUDIO} ${HEADER_GLFW} ${HEADER_BOOST} ${HEADER_SSL} ${HEADER_UTF8})
 # ========================================================
 
 # ===================== Libs =====================
 set(LIB_FMODEX ${OF_DIRECTORY}/libs/fmodex/lib/osx/libfmodex.dylib)
-set(LIB_GLFW ${OF_DIRECTORY}/libs/glfw/lib/osx/libglfw3.a)
+set(LIB_GLFW ${OF_DIRECTORY}/libs/glfw/lib/osx/glfw3.a)
 set(LIB_FREEIMAGE ${OF_DIRECTORY}/libs/FreeImage/lib/osx/freeimage.a)
 set(LIB_FREETYPE ${OF_DIRECTORY}/libs/freetype/lib/osx/freetype.a)
 set(LIB_GLEW ${OF_DIRECTORY}/libs/glew/lib/osx/glew.a)
 set(LIB_POCO_1 ${OF_DIRECTORY}/libs/poco/lib/osx/PocoCrypto.a)
 set(LIB_POCO_2 ${OF_DIRECTORY}/libs/poco/lib/osx/PocoData.a)
-set(LIB_POCO_3 ${OF_DIRECTORY}/libs/poco/lib/osx/PocoDataODBC.a)
-set(LIB_POCO_4 ${OF_DIRECTORY}/libs/poco/lib/osx/PocoDataSQLite.a)
-set(LIB_POCO_5 ${OF_DIRECTORY}/libs/poco/lib/osx/PocoFoundation.a)
-set(LIB_POCO_6 ${OF_DIRECTORY}/libs/poco/lib/osx/PocoNet.a)
-set(LIB_POCO_7 ${OF_DIRECTORY}/libs/poco/lib/osx/PocoNetSSL.a)
-set(LIB_POCO_8 ${OF_DIRECTORY}/libs/poco/lib/osx/PocoUtil.a)
-set(LIB_POCO_9 ${OF_DIRECTORY}/libs/poco/lib/osx/PocoXML.a)
-set(LIB_POCO_10 ${OF_DIRECTORY}/libs/poco/lib/osx/PocoZip.a)
+set(LIB_POCO_3 ${OF_DIRECTORY}/libs/poco/lib/osx/PocoDataSQLite.a)
+set(LIB_POCO_4 ${OF_DIRECTORY}/libs/poco/lib/osx/PocoJSON.a)
+set(LIB_POCO_5 ${OF_DIRECTORY}/libs/poco/lib/osx/PocoUtil.a)
+set(LIB_POCO_6 ${OF_DIRECTORY}/libs/poco/lib/osx/PocoXML.a)
+set(LIB_POCO_7 ${OF_DIRECTORY}/libs/poco/lib/osx/PocoNet.a)
+set(LIB_POCO_8 ${OF_DIRECTORY}/libs/poco/lib/osx/PocoNetSSL.a)
+set(LIB_POCO_9 ${OF_DIRECTORY}/libs/poco/lib/osx/PocoZip.a)
+set(LIB_POCO_10 ${OF_DIRECTORY}/libs/poco/lib/osx/PocoFoundation.a)
 set(LIB_RTAUDIO ${OF_DIRECTORY}/libs/rtAudio/lib/osx/rtAudio.a)
 set(LIB_TESS ${OF_DIRECTORY}/libs/tess2/lib/osx/tess2.a)
 set(LIB_CAIRO1 ${OF_DIRECTORY}/libs/cairo/lib/osx/cairo-script-interpreter.a)
@@ -120,56 +122,66 @@ set(LIB_CAIRO2 ${OF_DIRECTORY}/libs/cairo/lib/osx/cairo.a)
 set(LIB_CAIRO3 ${OF_DIRECTORY}/libs/cairo/lib/osx/pixman-1.a)
 set(LIB_OPENSSL1 ${OF_DIRECTORY}/libs/openssl/lib/osx/crypto.a)
 set(LIB_OPENSSL2 ${OF_DIRECTORY}/libs/openssl/lib/osx/ssl.a)
+set(LIB_BOOST_SYSTEM ${OF_DIRECTORY}/libs/boost/lib/osx/boost_system.a)
+set(LIB_BOOST_FS ${OF_DIRECTORY}/libs/boost/lib/osx/boost_filesystem.a)
 
-set(OF_CORE_LIBS ${LIB_POCO_1} ${LIB_POCO_2} ${LIB_POCO_3} ${LIB_POCO_4} ${LIB_POCO_5} ${LIB_POCO_6} ${LIB_POCO_7} ${LIB_POCO_8} ${LIB_POCO_9} ${LIB_POCO_10} ${LIB_TESS} ${LIB_GLEW} ${LIB_CAIRO1} ${LIB_CAIRO2} ${LIB_CAIRO3} ${LIB_FMODEX} ${LIB_RTAUDIO} ${LIB_OPENSSL1} ${LIB_OPENSSL2} ${LIB_GLFW} ${LIB_FREEIMAGE} ${LIB_FREETYPE})
+set(OF_CORE_LIBS ${LIB_POCO_1} ${LIB_POCO_2} ${LIB_POCO_3} ${LIB_POCO_4} ${LIB_POCO_5} ${LIB_POCO_6} ${LIB_POCO_7} ${LIB_POCO_8} ${LIB_POCO_9} ${LIB_POCO_10} ${LIB_TESS} ${LIB_GLEW} ${LIB_CAIRO1} ${LIB_CAIRO2} ${LIB_CAIRO3} ${LIB_FMODEX} ${LIB_RTAUDIO} ${LIB_OPENSSL1} ${LIB_OPENSSL2} ${LIB_GLFW} ${LIB_FREEIMAGE} ${LIB_FREETYPE} ${LIB_BOOST_FS} ${LIB_BOOST_SYSTEM})
 # ================================================
 
 # ===================== System Frameworks =====================
 set(FRAMEWORKS_DIR /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks)
 
 find_library(accelerate_lib Accelerate)
-find_library(iokit_lib IOKit)
 find_library(agl_lib AGL)
+find_library(appkit_lib AppKit)
 find_library(applicationservices_lib ApplicationServices)
 find_library(audiotoolbox_lib AudioToolbox)
+find_library(avfoundation AVFoundation)
+find_library(cocoa_lib Cocoa)
 find_library(coreaudio_lib CoreAudio)
 find_library(corefoundation_lib CoreFoundation)
+find_library(coremedia_lib CoreMedia)
 find_library(coreservices_lib CoreServices)
-find_library(opengl_lib OpenGL)
-find_library(quicktime_lib QuickTime)
 find_library(corevideo_lib CoreVideo)
+find_library(iokit_lib IOKit)
+find_library(opengl_lib OpenGL)
+find_library(quartzcore_lib QuartzCore)
+find_library(quicktime_lib QuickTime)
 find_library(qtkit_lib QTKit)
-find_library(cocoa_lib Cocoa)
 find_library(glut_lib GLUT)
 
 set(OF_CORE_FRAMEWORKS
         ${accelerate_lib}
-        ${iokit_lib}
         ${agl_lib}
+        ${appkit_lib}
         ${applicationservices_lib}
         ${audiotoolbox_lib}
+        ${avfoundation_lib}
+        ${cocoa_lib}
         ${coreaudio_lib}
         ${corefoundation_lib}
+        ${coremedia_lib}
         ${coreservices_lib}
-        ${opengl_lib}
-        ${quicktime_lib}
         ${corevideo_lib}
+        ${iokit_lib}
+        ${opengl_lib}
+        ${quartzcore_lib}
+        ${quicktime_lib}
         ${qtkit_lib}
-        ${cocoa_lib}
         ${glut_lib})
 # =============================================================
 set(OF_SOURCE_FILES ${OF_SOURCE_FILES} ${ADDON_SOURCE_FILES})
 include_directories(${OF_CORE_HEADERS} ${OF_ADDON_HEADERS})
-set_source_files_properties(${OF_SOURCE_FILES} PROPERTIES COMPILE_FLAGS "-stdlib=libstdc++ -x objective-c++")
+set_source_files_properties(${OF_SOURCE_FILES} PROPERTIES COMPILE_FLAGS "-std=c++11 -stdlib=libc++ -x objective-c++")
 add_library(core OBJECT ${OF_SOURCE_FILES})
 
 add_library(static STATIC $<TARGET_OBJECTS:core>)
-set_target_properties(static PROPERTIES LINK_FLAGS "-stdlib=libstdc++ -arch i386 -F'${OF_DIRECTORY}/libs/glut/lib/osx/' -F${FRAMEWORKS_DIR}")
+set_target_properties(static PROPERTIES LINK_FLAGS "-stdlib=libc++ -arch i386 -F'${OF_DIRECTORY}/libs/glut/lib/osx/' -F${FRAMEWORKS_DIR}")
 set_target_properties(static PROPERTIES OUTPUT_NAME openFrameworks)
 target_link_libraries(static ${OF_CORE_FRAMEWORKS} ${OF_ADDON_FRAMEWORKS} ${OF_CORE_LIBS})
 
 add_library(of_shared SHARED $<TARGET_OBJECTS:core>)
-set_target_properties(of_shared PROPERTIES LINK_FLAGS "-stdlib=libstdc++ -arch i386 -F'${OF_DIRECTORY}/libs/glut/lib/osx/' -F${FRAMEWORKS_DIR}")
+set_target_properties(of_shared PROPERTIES LINK_FLAGS "-stdlib=libc++ -arch i386 -F'${OF_DIRECTORY}/libs/glut/lib/osx/' -F${FRAMEWORKS_DIR}")
 set_target_properties(of_shared PROPERTIES LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin/${APP_NAME}.app/Contents/Frameworks)
 set_target_properties(of_shared PROPERTIES OUTPUT_NAME openFrameworks)
 target_link_libraries(of_shared ${OF_CORE_FRAMEWORKS} ${OF_ADDON_FRAMEWORKS} ${OF_CORE_LIBS})

@@ -13,7 +13,7 @@ Open CMakeLists.txt, and on line 8, update the path to your oF root path
 At the time of writing this, I was on OSX 10.11. If you find this when you're on a newer version, update line 128 in the file openFrameworks.cmake
 
 ## Compatibility
-This has been known to work excellently with oF 0.8.4, and CLion 1.1.1
+This has been known to work excellently with oF 0.9.0, and CLion 1.1.1
 
 ## Credits
 All the cmake credit goes to kureta (https://gist.github.com/kureta/b764cb130dafb91375d6). He/she's put in a lot of effort to get it working smoothly. Kudos @kureta!
