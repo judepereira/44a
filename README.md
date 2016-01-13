@@ -2,6 +2,8 @@
 
 This is a template for an openFrameworks project which compiles, and runs in JetBrains' awesome CLion. I've used one of the 3D examples to test this.
 
+## Further work based on this project has started [here](https://forum.openframeworks.cc/t/are-there-any-plan-for-supporting-clion/17188/). This includes updates for 0.9.0, and a project generator fork.
+
 ## Quick start
 Import this as an existing project in CLion, and don't choose the option to re-create the CMakeLists.txt.
 
